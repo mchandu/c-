@@ -128,3 +128,43 @@ int main()
  return 0;
 }
 *********************************************************************************************
+PROGRAM ON INHERITENCE
+
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+
+class Shape   // BASE CLASS
+{
+    public:
+    int width;
+    int height;
+  void setWidth(int w)
+  {
+   width = w;
+  }
+  void setHeight(int h)
+  {
+   height = h;
+  }
+};
+//
+class Rectangle : public Shape
+{
+   public:
+   int getArea()
+   {
+    return (width * height);
+   }
+};
+int main()
+{
+ clrscr();
+ Rectangle rect;
+ rect.setWidth(5);
+ rect.setHeight(7);
+ cout<< "Total Area: "<<rect.getArea() << endl;
+ getch();
+ return 0;
+}
+
