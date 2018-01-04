@@ -167,4 +167,58 @@ int main()
  getch();
  return 0;
 }
+****************************************************************************************************
+mulitple inheritance
+#include <iostream>
+using namespace std;
+
+class stud {
+protected:
+    int roll, m1, m2;
+
+public:
+    void get()
+    {
+        cout << "Enter the Roll No.: "; cin >> roll;
+        cout << "Enter the two highest marks: "; cin >> m1 >> m2;
+    }
+};
+class extracurriculam {
+protected:
+    int xm;
+
+public:
+    void getsm()
+    {
+        cout << "\nEnter the mark for Extra Curriculam Activities: "; cin >> xm;
+    }
+};
+class output : public stud, public extracurriculam {
+    int tot, avg;
+
+public:
+    void display()
+    {
+        tot = (m1 + m2 + xm);
+        avg = tot / 3;
+        cout << "\n\n\tRoll No    : " << roll << "\n\tTotal      : " << tot;
+        cout << "\n\tAverage    : " << avg;
+    }
+};
+int main()
+{
+    output O;
+    O.get();
+    O.getsm();
+    O.display();
+}
+output:
+Enter the Roll No.: 10
+Enter the two highest marks:45 58 
+Enter the mark for Extra Curriculam Activities: 57
+
+	Roll No    : 10
+	Total      : 160
+	Average    : 53
+*****************************************************************************************************
 
