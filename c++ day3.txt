@@ -221,4 +221,40 @@ Enter the mark for Extra Curriculam Activities: 57
 	Total      : 160
 	Average    : 53
 *****************************************************************************************************
+multilevel inheritance
+#include <iostream>
+using namespace std;
 
+class base {
+public:
+    void display1()
+    {
+        cout << "\nBase class content.";
+    }
+};
+class derived : public base {
+public:
+    void display2()
+    {
+        cout << "1st derived class content.";
+    }
+};
+
+class derived2 : public derived {
+    void display3()
+    {
+        cout << "\n2nd Derived class content.";
+    }
+};
+
+int main()
+{
+    derived2 D;
+    //D.display3();
+    D.display2();
+    D.display1();
+}
+output:
+1st derived class content.
+Base class content.
+*******************************************************************************************************
