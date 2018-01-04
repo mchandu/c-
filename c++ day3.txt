@@ -62,7 +62,7 @@ class Employee
  {
   clrscr();
   Employee e1;
-  e1.insert(12,"Varsha",5373.99);
+  e1.insert(12,"chandu",5373.99);
   e1.display();
   getch();
   return 0;
@@ -84,7 +84,7 @@ class Employee
   {
    cout<<"Non-parameterized consturctor"<<endl;
    id = 1001;
-   strcpy(name, "Varsha");
+   strcpy(name, "chandu");
    salary = 73663.736563;
   }
 
@@ -116,7 +116,7 @@ int main()
 {
  clrscr();
  Employee e1;
- Employee e2 = Employee(12,"Varsha",635.73) ;
+ Employee e2 = Employee(12,"chandu",635.73) ;
  //clrscr();
  e1.display();
  e2.display();
