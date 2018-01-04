@@ -236,11 +236,12 @@ class derived : public base {
 public:
     void display2()
     {
-        cout << "1st derived class content.";
+        cout << "\n1st derived class content.";
     }
 };
 
 class derived2 : public derived {
+public:
     void display3()
     {
         cout << "\n2nd Derived class content.";
@@ -255,6 +256,7 @@ int main()
     D.display1();
 }
 output:
+2nd Derived class content.
 1st derived class content.
 Base class content.
 *******************************************************************************************************
